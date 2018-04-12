@@ -39,4 +39,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     //
     implementation project(':libraries:immersionbar')
+    implementation project(':libraries:greendao-core')
+    implementation project(':libraries:greendao-generator')
 }

@@ -1918,6 +1918,7 @@ public class ImmersionBar {
      *
      * @return boolean 成功执行返回true
      */
+    @SuppressWarnings("unchecked")
     private void setMIUIStatusBarDarkFont(Window window, boolean darkFont) {
         if (window != null) {
             Class clazz = window.getClass();

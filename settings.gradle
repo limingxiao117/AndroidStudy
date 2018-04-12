@@ -1,2 +1,10 @@
+// GreenDao
+include ':libraries:greendao-api'
+include ':libraries:greendao-core'
+include ':libraries:greendao-generator'
+
+// 沉浸式
 include ':libraries:immersionbar'
+
+//
 include ':app'

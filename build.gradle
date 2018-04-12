@@ -1,14 +1,15 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
+version = '3.2.3-SNAPSHOT'
+
 buildscript {
-    
+
     repositories {
         google()
         jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.0'
-        
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -20,9 +21,108 @@ allprojects {
         google()
         jcenter()
     }
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
     apply from: "${project.rootDir}/common_build.gradle"
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
+}
+
+subprojects {
+    apply plugin: 'maven'
+    apply plugin: 'signing'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    configurations {
+        deployerJars
+    }
+
+    dependencies {
+        deployerJars 'org.apache.maven.wagon:wagon-webdav:1.0-beta-2'
+    }
+
+    signing {
+        if (project.hasProperty('signing.keyId') && project.hasProperty('signing.password') &&
+                project.hasProperty('signing.secretKeyRingFile')) {
+            sign configurations.archives
+        } else {
+            println "Signing information missing/incomplete for ${project.name}"
+        }
+    }
+
+    // Use afterEvaluate or all dependencies will be lost in the generated POM
+    afterEvaluate {
+        uploadArchives {
+            repositories {
+                mavenDeployer {
+                    def isSnapshot = version.endsWith('-SNAPSHOT')
+                    def sonatypeRepositoryUrl = isSnapshot ?
+                            "https://oss.sonatype.org/content/repositories/snapshots/"
+                            : "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+                    if (project.hasProperty('preferedRepo') && preferedRepo == 'local') {
+                        repository url: repositories.mavenLocal().url
+                    } else if (project.hasProperty('preferedRepo') && project.hasProperty('preferedUsername')
+                            && project.hasProperty('preferedPassword')) {
+                        configuration = configurations.deployerJars
+                        repository(url: preferedRepo) {
+                            authentication(userName: preferedUsername, password: preferedPassword)
+                        }
+                    } else if (project.hasProperty('sonatypeUsername') && project.hasProperty('sonatypePassword')) {
+                        beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+                        repository(url: sonatypeRepositoryUrl) {
+                            authentication(userName: sonatypeUsername, password: sonatypePassword)
+                        }
+                    } else {
+                        println "Settings sonatypeUsername/sonatypePassword missing/incomplete for ${project.name}"
+                    }
+
+                    pom.project {
+                        packaging 'jar'
+                        url 'http://greenrobot.org/greendao'
+
+                        scm {
+                            url 'https://github.com/greenrobot/greenDAO'
+                            connection 'scm:git@github.com:greenrobot/greenDAO.git'
+                            developerConnection 'scm:git@github.com:greenrobot/greenDAO.git'
+                        }
+
+                        developers {
+                            developer {
+                                id 'greenrobot'
+                                name 'greenrobot'
+                            }
+                        }
+
+                        issueManagement {
+                            system 'GitHub Issues'
+                            url 'https://github.com/greenrobot/greenDAO/issues'
+                        }
+
+                        organization {
+                            name 'greenrobot'
+                            url 'http://greenrobot.org'
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
