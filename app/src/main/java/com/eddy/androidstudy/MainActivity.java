@@ -1,15 +1,23 @@
 package com.eddy.androidstudy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import com.eddy.androidstudy.greendao.GreenTestActivity;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     // Used to load the 'native-lib' library on application startup.
     static {
         System.loadLibrary("native-lib");
     }
+
+    private Button mBtnGreenDao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +25,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Example of a call to a native method
-        TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI());
+        Log.d("eddy", stringFromJNI());
+
+        mBtnGreenDao = findViewById(R.id.btn_green_dao);
+        mBtnGreenDao.setOnClickListener(this);
+
     }
 
     /**
@@ -26,4 +37,13 @@ public class MainActivity extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI();
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_green_dao:
+                startActivity(new Intent(this, GreenTestActivity.class));
+                break;
+        }
+    }
 }
