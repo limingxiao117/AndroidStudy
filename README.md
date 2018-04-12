@@ -1,12 +1,12 @@
 # AndroidStudy
---20180412
-双进程守护JNI实现
 
-GreenDao集成学习
+## 1）双进程守护JNI实现
 
-沉浸式兼容
+## 2）GreenDao集成学习
 
-Volley框架集成
+## 3）沉浸式兼容
+
+## 4）Volley框架集成
 
 
 
