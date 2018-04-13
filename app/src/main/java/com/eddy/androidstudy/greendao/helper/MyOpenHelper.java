@@ -29,6 +29,7 @@ public class MyOpenHelper extends DaoMaster.OpenHelper {
      * @param newVersion
      */
     @Override
+    @SuppressWarnings("unchecked")
     public void onUpgrade(Database db, int oldVersion, int newVersion) {
         //操作数据库的更新 有几个表升级都可以传入到下面
 

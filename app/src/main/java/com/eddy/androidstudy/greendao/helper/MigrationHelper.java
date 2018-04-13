@@ -33,6 +33,7 @@ public class MigrationHelper {
         return instance;
     }
 
+    @SuppressWarnings("unchecked")
     public void migrate(Database db, Class<? extends AbstractDao<?, ?>>... daoClasses) {
 
         generateTempTables(db, daoClasses);
@@ -47,6 +48,7 @@ public class MigrationHelper {
      * @param db
      * @param daoClasses
      */
+    @SuppressWarnings("unchecked")
     private void generateTempTables(Database db, Class<? extends AbstractDao<?, ?>>... daoClasses) {
         for (int i = 0; i < daoClasses.length; i++) {
             DaoConfig daoConfig = new DaoConfig(db, daoClasses[i]);
@@ -106,6 +108,7 @@ public class MigrationHelper {
      * @param db
      * @param daoClasses
      */
+    @SuppressWarnings("unchecked")
     private void restoreData(Database db, Class<? extends AbstractDao<?, ?>>... daoClasses) {
         for (int i = 0; i < daoClasses.length; i++) {
             DaoConfig         daoConfig     = new DaoConfig(db, daoClasses[i]);
