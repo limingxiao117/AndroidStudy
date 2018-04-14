@@ -2,10 +2,12 @@
 
 ## 主要功能：
 
-    1）双进程守护JNI实现
-    2）GreenDao集成学习
-    3）沉浸式兼容
-    4）Volley框架集成
+    1）Gradle公共变量提取
+    2）双进程守护JNI实现
+    3）GreenDao集成学习
+    4）沉浸式兼容
+    5）Volley框架集成
+    6）多Dex
 
 
 ## 详细介绍：
@@ -80,7 +82,37 @@ ImmersionBar.with(this)
 #### 5）Volley框架集成
 
 
+#### 6）多Dex
+在对应Model中增加如下配置
+```
+android {
+    ...
+
+    defaultConfig {
+        ...
+
+        // 多Dex
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    ...
+    implementation 'com.android.support:multidex:1.0.0'
+}
+```
+```
+public class App extends MultiDexApplication {
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
+}
+```
 
 ## Contact Me
 
 * Email: limingxiao117@126.com
+* WeChat:
