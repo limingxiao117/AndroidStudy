@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.eddy.androidstudy.daemon.DaemonService;
 import com.eddy.androidstudy.greendao.GreenTestActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -24,12 +25,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initial();
+
         // Example of a call to a native method
         Log.d("eddy", stringFromJNI());
 
         mBtnGreenDao = findViewById(R.id.btn_green_dao);
         mBtnGreenDao.setOnClickListener(this);
 
+    }
+
+    private void initial() {
+        Intent intent = new Intent(this, DaemonService.class);
+        startService(intent);
     }
 
     /**
