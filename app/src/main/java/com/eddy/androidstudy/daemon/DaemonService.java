@@ -17,7 +17,7 @@ import android.util.Log;
 public class DaemonService extends Service {
 
     public DaemonService() {
-        Log.i("eddy", "开启service" + Process.myUid());
+        Log.i("eddy", "开启 DaemonService: 进程ID = " + Process.myUid());
     }
 
     @Override

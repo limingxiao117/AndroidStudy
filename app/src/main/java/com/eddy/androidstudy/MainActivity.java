@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     // Used to load the 'native-lib' library on application startup.
     static {
-        System.loadLibrary("native-lib");
+        System.loadLibrary("study");
     }
 
     private Button mBtnGreenDao;
@@ -36,8 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initial() {
-        Intent intent = new Intent(this, DaemonService.class);
-        startService(intent);
+        if (Constants.IS_NEED_DAEMON_PROCESS) {
+            Intent intent = new Intent(this, DaemonService.class);
+            startService(intent);
+        }
     }
 
     /**
