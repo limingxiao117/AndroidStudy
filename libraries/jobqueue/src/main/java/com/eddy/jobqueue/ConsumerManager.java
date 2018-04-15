@@ -2,21 +2,21 @@ package com.eddy.jobqueue;
 
 import android.support.annotation.NonNull;
 
-import com.birbit.android.jobqueue.config.Configuration;
-import com.birbit.android.jobqueue.log.JqLog;
-import com.birbit.android.jobqueue.messaging.Message;
-import com.birbit.android.jobqueue.messaging.MessageFactory;
-import com.birbit.android.jobqueue.messaging.MessagePredicate;
-import com.birbit.android.jobqueue.messaging.MessageQueue;
-import com.birbit.android.jobqueue.messaging.MessageQueueConsumer;
-import com.birbit.android.jobqueue.messaging.SafeMessageQueue;
-import com.birbit.android.jobqueue.messaging.Type;
-import com.birbit.android.jobqueue.messaging.message.CommandMessage;
-import com.birbit.android.jobqueue.messaging.message.JobConsumerIdleMessage;
-import com.birbit.android.jobqueue.messaging.message.RunJobMessage;
-import com.birbit.android.jobqueue.messaging.message.RunJobResultMessage;
-import com.birbit.android.jobqueue.scheduling.SchedulerConstraint;
-import com.birbit.android.jobqueue.timer.Timer;
+import com.eddy.jobqueue.config.Configuration;
+import com.eddy.jobqueue.log.JqLog;
+import com.eddy.jobqueue.messaging.Message;
+import com.eddy.jobqueue.messaging.MessageFactory;
+import com.eddy.jobqueue.messaging.MessagePredicate;
+import com.eddy.jobqueue.messaging.MessageQueue;
+import com.eddy.jobqueue.messaging.MessageQueueConsumer;
+import com.eddy.jobqueue.messaging.SafeMessageQueue;
+import com.eddy.jobqueue.messaging.Type;
+import com.eddy.jobqueue.messaging.message.CommandMessage;
+import com.eddy.jobqueue.messaging.message.JobConsumerIdleMessage;
+import com.eddy.jobqueue.messaging.message.RunJobMessage;
+import com.eddy.jobqueue.messaging.message.RunJobResultMessage;
+import com.eddy.jobqueue.scheduling.SchedulerConstraint;
+import com.eddy.jobqueue.timer.Timer;
 
 import java.util.ArrayList;
 import java.util.HashMap;

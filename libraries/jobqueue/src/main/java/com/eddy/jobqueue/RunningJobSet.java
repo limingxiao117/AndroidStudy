@@ -1,7 +1,7 @@
 package com.eddy.jobqueue;
 
-import com.birbit.android.jobqueue.log.JqLog;
-import com.birbit.android.jobqueue.timer.Timer;
+import com.eddy.jobqueue.log.JqLog;
+import com.eddy.jobqueue.timer.Timer;
 
 import java.util.ArrayList;
 import java.util.Collection;

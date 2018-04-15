@@ -31,4 +31,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation 'com.squareup.okio:okio:1.8.0'
+
+    // use an old version since we only need a few util classes that were already there for a long
+    // time. If app depends on a newer one, gradle will pick it for us.
+    //noinspection GradleDependency
+    // remove when gms moves to individual libraries
+    implementation 'com.android.support:support-v4:27.+'
+    // build tools does not allow making this provided so we make it optional when pom is created
+    implementation 'com.google.android.gms:play-services-gcm:10.2.1'
 }

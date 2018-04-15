@@ -4,8 +4,8 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.birbit.android.jobqueue.network.NetworkUtil;
-import com.birbit.android.jobqueue.timer.Timer;
+import com.eddy.jobqueue.network.NetworkUtil;
+import com.eddy.jobqueue.timer.Timer;
 
 import java.util.Set;
 
@@ -287,7 +287,7 @@ public class JobHolder {
      * <p>
      * Note that these network status can be compared to each other and higher network type is a
      * larger requirement. For instance, if this method returns
-     * {@link com.birbit.android.jobqueue.network.NetworkUtil.NetworkStatus#DISCONNECTED}, that does
+     * {@link com.eddy.jobqueue.network.NetworkUtil.NetworkStatus#DISCONNECTED}, that does
      * not mean job requires no network to run. Instead, it means it does not require any network
      * to run.
      *

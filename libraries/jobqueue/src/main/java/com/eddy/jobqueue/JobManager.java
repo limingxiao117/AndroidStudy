@@ -5,21 +5,21 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.VisibleForTesting;
 
-import com.birbit.android.jobqueue.callback.JobManagerCallback;
-import com.birbit.android.jobqueue.callback.JobManagerCallbackAdapter;
-import com.birbit.android.jobqueue.config.Configuration;
-import com.birbit.android.jobqueue.log.JqLog;
-import com.birbit.android.jobqueue.messaging.Message;
-import com.birbit.android.jobqueue.messaging.MessageFactory;
-import com.birbit.android.jobqueue.messaging.MessageQueue;
-import com.birbit.android.jobqueue.messaging.PriorityMessageQueue;
-import com.birbit.android.jobqueue.messaging.message.AddJobMessage;
-import com.birbit.android.jobqueue.messaging.message.CancelMessage;
-import com.birbit.android.jobqueue.messaging.message.CommandMessage;
-import com.birbit.android.jobqueue.messaging.message.PublicQueryMessage;
-import com.birbit.android.jobqueue.messaging.message.SchedulerMessage;
-import com.birbit.android.jobqueue.scheduling.Scheduler;
-import com.birbit.android.jobqueue.scheduling.SchedulerConstraint;
+import com.eddy.jobqueue.callback.JobManagerCallback;
+import com.eddy.jobqueue.callback.JobManagerCallbackAdapter;
+import com.eddy.jobqueue.config.Configuration;
+import com.eddy.jobqueue.log.JqLog;
+import com.eddy.jobqueue.messaging.Message;
+import com.eddy.jobqueue.messaging.MessageFactory;
+import com.eddy.jobqueue.messaging.MessageQueue;
+import com.eddy.jobqueue.messaging.PriorityMessageQueue;
+import com.eddy.jobqueue.messaging.message.AddJobMessage;
+import com.eddy.jobqueue.messaging.message.CancelMessage;
+import com.eddy.jobqueue.messaging.message.CommandMessage;
+import com.eddy.jobqueue.messaging.message.PublicQueryMessage;
+import com.eddy.jobqueue.messaging.message.SchedulerMessage;
+import com.eddy.jobqueue.scheduling.Scheduler;
+import com.eddy.jobqueue.scheduling.SchedulerConstraint;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutionException;
@@ -54,7 +54,7 @@ public class JobManager {
      *
      * @param configuration The configuration to be used for the JobManager
      *
-     * @see com.birbit.android.jobqueue.config.Configuration.Builder
+     * @see com.eddy.jobqueue.config.Configuration.Builder
      */
     public JobManager(Configuration configuration) {
         messageFactory = new MessageFactory();

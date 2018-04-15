@@ -13,9 +13,9 @@ import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.VisibleForTesting;
 
-import com.birbit.android.jobqueue.Params;
-import com.birbit.android.jobqueue.log.JqLog;
-import com.birbit.android.jobqueue.network.NetworkUtil;
+import com.eddy.jobqueue.Params;
+import com.eddy.jobqueue.log.JqLog;
+import com.eddy.jobqueue.network.NetworkUtil;
 
 import java.util.UUID;
 

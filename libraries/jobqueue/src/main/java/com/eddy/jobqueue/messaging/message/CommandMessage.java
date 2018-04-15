@@ -1,7 +1,7 @@
 package com.eddy.jobqueue.messaging.message;
 
-import com.birbit.android.jobqueue.messaging.Message;
-import com.birbit.android.jobqueue.messaging.Type;
+import com.eddy.jobqueue.messaging.Message;
+import com.eddy.jobqueue.messaging.Type;
 
 public class CommandMessage extends Message {
     public static final int QUIT = 1;

@@ -1,8 +1,8 @@
 package com.eddy.jobqueue.messaging.message;
 
-import com.birbit.android.jobqueue.messaging.Message;
-import com.birbit.android.jobqueue.messaging.Type;
-import com.birbit.android.jobqueue.Job;
+import com.eddy.jobqueue.messaging.Message;
+import com.eddy.jobqueue.messaging.Type;
+import com.eddy.jobqueue.Job;
 
 public class AddJobMessage extends Message {
     private Job job;

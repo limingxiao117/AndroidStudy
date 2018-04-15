@@ -1,8 +1,8 @@
 package com.eddy.jobqueue.messaging.message;
 
-import com.birbit.android.jobqueue.messaging.Message;
-import com.birbit.android.jobqueue.messaging.Type;
-import com.birbit.android.jobqueue.CancelResult;
+import com.eddy.jobqueue.messaging.Message;
+import com.eddy.jobqueue.messaging.Type;
+import com.eddy.jobqueue.CancelResult;
 
 public class CancelResultMessage extends Message {
     CancelResult.AsyncCancelCallback callback;

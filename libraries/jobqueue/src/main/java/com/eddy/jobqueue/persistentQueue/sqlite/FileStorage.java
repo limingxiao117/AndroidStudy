@@ -22,6 +22,7 @@ import okio.Okio;
 class FileStorage {
     private static final String EXT = ".jobs";
     private final File folder;
+
     FileStorage(Context appContext, String id) {
         this.folder = new File(appContext.getDir("com_birbit_jobqueue_jobs", Context.MODE_PRIVATE),
                 "files_" + id);
@@ -53,7 +54,7 @@ class FileStorage {
     }
 
     void save(String id, byte[] data) throws IOException {
-        final File file = toFile(id);
+        final File   file = toFile(id);
         BufferedSink sink = Okio.buffer(Okio.sink(file));
         try {
             sink.write(data).flush();

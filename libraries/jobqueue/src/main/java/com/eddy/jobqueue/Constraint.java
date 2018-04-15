@@ -1,6 +1,6 @@
 package com.eddy.jobqueue;
 
-import com.birbit.android.jobqueue.network.NetworkUtil;
+import com.eddy.jobqueue.network.NetworkUtil;
 
 import java.util.ArrayList;
 import java.util.Collection;

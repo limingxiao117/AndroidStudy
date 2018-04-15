@@ -1,13 +1,13 @@
 package com.eddy.jobqueue.persistentQueue.sqlite;
 
-import com.birbit.android.jobqueue.Constraint;
-import com.birbit.android.jobqueue.Job;
-import com.birbit.android.jobqueue.JobHolder;
-import com.birbit.android.jobqueue.JobManager;
-import com.birbit.android.jobqueue.JobQueue;
-import com.birbit.android.jobqueue.Params;
-import com.birbit.android.jobqueue.config.Configuration;
-import com.birbit.android.jobqueue.log.JqLog;
+import com.eddy.jobqueue.Constraint;
+import com.eddy.jobqueue.Job;
+import com.eddy.jobqueue.JobHolder;
+import com.eddy.jobqueue.JobManager;
+import com.eddy.jobqueue.JobQueue;
+import com.eddy.jobqueue.Params;
+import com.eddy.jobqueue.config.Configuration;
+import com.eddy.jobqueue.log.JqLog;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -442,6 +442,7 @@ public class SqliteJobQueue implements JobQueue {
         return holder;
     }
 
+    @SuppressWarnings("unchecked")
     private Set<String> loadTags(String jobId) {
         Cursor cursor = db.rawQuery(sqlHelper.LOAD_TAGS_QUERY, new String[]{jobId});
         try {
@@ -501,6 +502,7 @@ public class SqliteJobQueue implements JobQueue {
         }
 
         @Override
+        @SuppressWarnings("unchecked")
         public <T extends Job> T deserialize(byte[] bytes) throws IOException, ClassNotFoundException {
             if (bytes == null || bytes.length == 0) {
                 return null;

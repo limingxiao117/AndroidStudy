@@ -2,9 +2,9 @@ package com.eddy.jobqueue.messaging.message;
 
 import android.support.annotation.Nullable;
 
-import com.birbit.android.jobqueue.Job;
-import com.birbit.android.jobqueue.messaging.Message;
-import com.birbit.android.jobqueue.messaging.Type;
+import com.eddy.jobqueue.Job;
+import com.eddy.jobqueue.messaging.Message;
+import com.eddy.jobqueue.messaging.Type;
 
 /**
  * Used for external callbacks to user code

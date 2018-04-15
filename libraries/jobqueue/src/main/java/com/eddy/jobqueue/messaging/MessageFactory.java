@@ -13,6 +13,7 @@ public class MessageFactory {
         Arrays.fill(counts, 0);
     }
 
+    @SuppressWarnings("unchecked")
     public <T extends Message> T obtain(Class<T> klass) {
         final Type type = Type.mapping.get(klass);
         //noinspection SynchronizationOnLocalVariableOrMethodParameter

@@ -1,6 +1,6 @@
 package com.eddy.jobqueue.persistentQueue.sqlite;
 
-import com.birbit.android.jobqueue.log.JqLog;
+import com.eddy.jobqueue.log.JqLog;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;

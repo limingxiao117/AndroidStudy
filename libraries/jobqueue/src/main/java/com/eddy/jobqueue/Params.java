@@ -2,7 +2,7 @@ package com.eddy.jobqueue;
 
 import android.support.annotation.Nullable;
 
-import com.birbit.android.jobqueue.network.NetworkUtil;
+import com.eddy.jobqueue.network.NetworkUtil;
 
 import java.util.Collections;
 import java.util.HashSet;
