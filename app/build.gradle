@@ -49,6 +49,7 @@ dependencies {
     implementation project(':libraries:immersionbar')
     implementation project(':libraries:greendao-core')
     implementation project(':libraries:greendao-generator')
+    implementation project(':libraries:jobqueue')
 }
 
 greendao {

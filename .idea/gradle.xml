@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/libraries/greendao-core" />
             <option value="$PROJECT_DIR$/libraries/greendao-generator" />
             <option value="$PROJECT_DIR$/libraries/immersionbar" />
+            <option value="$PROJECT_DIR$/libraries/jobqueue" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

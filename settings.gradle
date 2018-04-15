@@ -1,5 +1,6 @@
 // GreenDao
 include ':libraries:greendao-api'
+include ':libraries:jobqueue'
 include ':libraries:greendao-core'
 include ':libraries:greendao-generator'
 
