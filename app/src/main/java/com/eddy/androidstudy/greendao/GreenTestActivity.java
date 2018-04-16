@@ -1,10 +1,7 @@
 package com.eddy.androidstudy.greendao;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,6 +10,7 @@ import android.widget.Toast;
 import com.eddy.androidstudy.R;
 import com.eddy.androidstudy.greendao.db.StudentDaoOpe;
 import com.eddy.androidstudy.greendao.entity.Student;
+import com.eddy.base.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -98,7 +96,7 @@ public class GreenTestActivity extends AppCompatActivity implements View.OnClick
                 List<Student> students = StudentDaoOpe.queryAll(this);
                 mTvContent.setText(students.toString());
                 for (int i = 0; i < students.size(); i++) {
-                    Log.i("Log", students.get(i).getName());
+                    Logger.d(students.get(i).getName());
                 }
 
                 break;
@@ -112,8 +110,8 @@ public class GreenTestActivity extends AppCompatActivity implements View.OnClick
                     Toast.makeText(this, "没有更多数据了", Toast.LENGTH_SHORT).show();
                 }
                 for (Student st : students2) {
-                    Log.e("TAG", "onViewClicked: ==" + st);
-                    Log.e("TAG", "onViewClicked: == num = " + st.getNum());
+                    Logger.d("onViewClicked: == " + st);
+                    Logger.d("onViewClicked: == num = " + st.getNum());
                 }
                 page++;
                 mTvContent.setText(students2.toString());

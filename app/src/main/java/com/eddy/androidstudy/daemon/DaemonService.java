@@ -5,7 +5,8 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.Process;
 import android.support.annotation.Nullable;
-import android.util.Log;
+
+import com.eddy.base.Logger;
 
 /**
  * 创建 ：eddyli@zmodo.com
@@ -17,14 +18,14 @@ import android.util.Log;
 public class DaemonService extends Service {
 
     public DaemonService() {
-        Log.i("eddy", "开启 DaemonService: 进程ID = " + Process.myUid());
+        Logger.d("开启 DaemonService: 进程ID = " + Process.myUid());
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
         DaemonWatcher watcher = new DaemonWatcher();
-        Log.i("eddy", "Process.myUid() = " + Process.myUid());
+        Logger.d("Process.myUid() = " + Process.myUid());
         watcher.openDaemonWatcher(Process.myUid());
     }
 

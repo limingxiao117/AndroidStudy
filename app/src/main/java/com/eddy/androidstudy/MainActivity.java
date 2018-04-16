@@ -1,15 +1,14 @@
 package com.eddy.androidstudy;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.eddy.androidstudy.daemon.DaemonService;
 import com.eddy.androidstudy.greendao.GreenTestActivity;
+import com.eddy.base.Logger;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         initial();
 
         // Example of a call to a native method
-        Log.d("eddy", stringFromJNI());
+        Logger.d(stringFromJNI());
 
         mBtnGreenDao = findViewById(R.id.btn_green_dao);
         mBtnGreenDao.setOnClickListener(this);

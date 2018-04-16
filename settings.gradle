@@ -1,11 +1,16 @@
-// GreenDao
-include ':libraries:greendao-api'
-include ':libraries:jobqueue'
-include ':libraries:greendao-core'
-include ':libraries:greendao-generator'
-
 // 沉浸式
 include ':libraries:immersionbar'
+
+// Activity, Fragment
+include ':libraries:base'
+
+// JobManager
+include ':libraries:jobqueue'
+
+// GreenDao
+include ':libraries:greendao-api'
+include ':libraries:greendao-core'
+include ':libraries:greendao-generator'
 
 //
 include ':app'
