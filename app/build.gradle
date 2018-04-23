@@ -2,9 +2,20 @@ apply plugin: 'com.android.application'
 apply plugin: 'org.greenrobot.greendao'
 
 android {
+
     compileSdkVersion project.ext.compileSdkVersion
     buildToolsVersion project.ext.buildToolsVersion
 
+    signingConfigs {
+        android_study {
+            keyPassword project.ext.key_password_android_study
+            storeFile file(project.ext.property_file_keystore_android_study)
+            storePassword project.ext.key_password_android_study
+            keyAlias project.ext.key_alias_android_study
+            v2SigningEnabled true
+            v1SigningEnabled true
+        }
+    }
     defaultConfig {
         applicationId project.ext.applicationId
         minSdkVersion project.ext.minSdkVersion
@@ -22,13 +33,28 @@ android {
         // 多Dex
         multiDexEnabled true
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
+    lintOptions {
+        checkReleaseBuilds true
+        abortOnError false
     }
 
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
+            signingConfig signingConfigs.android_study
+        }
+        debug {
+            debuggable true
+            jniDebuggable false
+            renderscriptDebuggable false
+            minifyEnabled false
+            // proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
     externalNativeBuild {
         cmake {
             path "./src/main/cpp/CMakeLists.txt"

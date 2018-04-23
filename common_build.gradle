@@ -8,4 +8,8 @@ project.ext {
     applicationId = 'com.eddy.andoridstudy'
     versionCode = 1
     versionName = '1.0.0.02'
+    // 签名信息
+    property_file_keystore_android_study = '../keystore/android_study.keystore'
+    key_password_android_study = '123456'
+    key_alias_android_study = 'android.keystore'
 }

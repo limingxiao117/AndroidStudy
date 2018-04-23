@@ -19,3 +19,10 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep class rx.**
+-keep class org.greenrobot.**
+-dontwarn freemarker.**
+-dontwarn org.greenrobot.greendao.**
+-dontwarn okio.DeflaterSink
+-dontwarn okio.Okio
