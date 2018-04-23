@@ -8,6 +8,8 @@ import android.widget.Button;
 
 import com.eddy.androidstudy.daemon.DaemonService;
 import com.eddy.androidstudy.greendao.GreenTestActivity;
+import com.eddy.androidstudy.retrofit.RetrofitTestActivity;
+import com.eddy.androidstudy.volley.VolleyTestActivity;
 import com.eddy.base.Logger;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -18,6 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private Button mBtnGreenDao;
+    private Button mBtnVolley;
+    private Button mBtnRetrofit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mBtnGreenDao = findViewById(R.id.btn_green_dao);
         mBtnGreenDao.setOnClickListener(this);
+
+        mBtnVolley = findViewById(R.id.btn_volley_test);
+        mBtnVolley.setOnClickListener(this);
+
+        mBtnRetrofit = findViewById(R.id.btn_retrofit_test);
+        mBtnRetrofit.setOnClickListener(this);
 
     }
 
@@ -52,6 +62,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_green_dao:
                 startActivity(new Intent(this, GreenTestActivity.class));
+                break;
+            case R.id.btn_volley_test:
+                startActivity(new Intent(this, VolleyTestActivity.class));
+                break;
+            case R.id.btn_retrofit_test:
+                startActivity(new Intent(this, RetrofitTestActivity.class));
                 break;
         }
     }

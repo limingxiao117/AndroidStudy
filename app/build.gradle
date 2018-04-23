@@ -81,6 +81,10 @@ dependencies {
     implementation project(':libraries:greendao-core')
     implementation project(':libraries:greendao-generator')
     implementation project(':libraries:jobqueue')
+
+    // 网络库
+    implementation project(':libraries:volley')
+    implementation project(':libraries:retrofit')
 }
 
 greendao {

@@ -11,5 +11,10 @@ public class Constants {
     /**
      * 是否需要守护进程
      */
-    public static final boolean IS_NEED_DAEMON_PROCESS = true;
+    public static final boolean IS_NEED_DAEMON_PROCESS = false;
+
+    /**
+     * 是否使用Volley网络框架
+     */
+    public static final boolean IS_USE_VOLLEY = true;
 }

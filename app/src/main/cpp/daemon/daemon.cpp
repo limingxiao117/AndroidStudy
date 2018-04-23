@@ -64,7 +64,7 @@ void *thread_rt(void *data) {
     pid_t pid;
     /*
      * getppid获取父进程的id  getpid获取自己的id
-     * 子进程反复的 循环在判断父进程是否被干掉，如果被干掉就说明小插件的服务被干掉了
+     * 子进程反复的循环在判断父进程是否被干掉，如果被干掉就说明小插件的服务被干掉了
      */
     while ((pid = getppid()) != 1) {
         sleep(20);
@@ -74,7 +74,7 @@ void *thread_rt(void *data) {
     // 如果父进程被干掉了，那么它的子进程就会被init托管，而这个进程的id就是1
     LOGI("重启父进程");
     /*
-     * 调用am.startservice重新开启服务 要制定服务的进程id
+     * 调用am.startservice重新开启服务 要指定服务的进程id
      * execlp("am", "am", "startservice", "--user", user_id,
      * "com.pybeta.daymatter.service/com.pybeta.daymatter.service.AutoRefreshService",
      * (char *) NULL);

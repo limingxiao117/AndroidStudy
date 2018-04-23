@@ -21,7 +21,7 @@ public class App extends MultiDexApplication {
     private static App        mInstance;
     private        JobManager mJobManager;
 
-    private App() {
+    public App() {
         mInstance = this;
     }
 
