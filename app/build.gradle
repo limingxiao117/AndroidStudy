@@ -85,6 +85,9 @@ dependencies {
     // 网络库
     implementation project(':libraries:volley')
     implementation project(':libraries:retrofit')
+
+    // 内存泄漏：LeakCanary
+    compile 'com.squareup.leakcanary:leakcanary-android:1.5'
 }
 
 greendao {

@@ -16,8 +16,8 @@
             <option value="$PROJECT_DIR$/libraries/greendao-generator" />
             <option value="$PROJECT_DIR$/libraries/immersionbar" />
             <option value="$PROJECT_DIR$/libraries/jobqueue" />
+            <option value="$PROJECT_DIR$/libraries/retrofit" />
             <option value="$PROJECT_DIR$/libraries/volley" />
-            <option value="$PROJECT_DIR$/retrofit" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

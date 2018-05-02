@@ -9,8 +9,19 @@
     5）Volley框架集成
     6）Retrofit框架集成
     7）多Dex
+	8）LeakCanary
 
-
+## 待完成功能
+	
+	1）缓存	-- DiskLruCache    Java实现基于LRU的磁盘缓存
+	2）图片加载 -- Fresco  一个用于管理图像和他们使用的内存的库
+	3）网络解析 -- Gson    一个Java序列化/反序列化库，可以将JSON和java对象互相转换
+	4）事件总线 -- EventBus    安卓优化的事件总线，简化了活动、片段、线程、服务等的通信
+	5）Log框架 -- Logger  简单，漂亮，强大的Android日志工具
+	6）性能优化 -- LeakCanary  内存泄漏检测工具
+				BlockCanary
+	7）Adapter复用 BaseRecyclerViewAdapterHelper Adapter复用工具类
+	
 ## 详细介绍：
 #### 1）Gradle公共变量提取
 
@@ -124,6 +135,31 @@ public class App extends MultiDexApplication {
         super.attachBaseContext(base);
         MultiDex.install(this);
     }
+}
+```
+
+#### 8）LeakCanary
+```
+In your build.gradle:
+dependencies {
+  debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+  releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+}
+
+
+In your Application class:
+public class ExampleApplication extends Application {
+
+  @Override public void onCreate() {
+    super.onCreate();
+    if (LeakCanary.isInAnalyzerProcess(this)) {
+      // This process is dedicated to LeakCanary for heap analysis.
+      // You should not init your app in this process.
+      return;
+    }
+    LeakCanary.install(this);
+    // Normal app init code...
+  }
 }
 ```
 

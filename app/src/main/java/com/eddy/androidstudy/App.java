@@ -1,6 +1,7 @@
 package com.eddy.androidstudy;
 
 import android.content.Context;
+import android.os.StrictMode;
 import android.support.multidex.MultiDex;
 import android.support.multidex.MultiDexApplication;
 
@@ -8,6 +9,8 @@ import com.eddy.base.Logger;
 import com.eddy.jobqueue.JobManager;
 import com.eddy.jobqueue.config.Configuration;
 import com.eddy.jobqueue.log.CustomLogger;
+
+import com.squareup.leakcanary.LeakCanary;
 
 /**
  * 创建 ：eddyli@zmodo.com
@@ -39,14 +42,49 @@ public class App extends MultiDexApplication {
         // config Log
         Logger.init(BuildConfig.DEBUG, "eddy");
 
+        // config LeakCanary
+        configureLearCanary();
+
+        // config StrictMode
+        configureStrictMode();
+
         // config JobManager
         configureJobManager();
+
+
     }
 
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
+    }
+
+    private void configureLearCanary() {
+        // 检查内存泄漏
+        if (BuildConfig.DEBUG && Constants.IS_NEED_LEAK_CANARY) {
+            if (LeakCanary.isInAnalyzerProcess(this)) {
+                ///
+            } else {
+                LeakCanary.install(this);
+            }
+        }
+    }
+
+    private void configureStrictMode() {
+        if (BuildConfig.DEBUG && Constants.IS_NEED_STRICT_MODE) {
+            // 开启StrictMode的线程模式
+            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                    .detectAll()
+                    .penaltyLog()
+                    .build());
+
+            // 开启虚拟机模式
+            StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
+                    .detectAll()
+                    .penaltyLog()
+                    .build());
+        }
     }
 
     private void configureJobManager() {
