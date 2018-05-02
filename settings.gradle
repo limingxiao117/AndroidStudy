@@ -1,6 +1,9 @@
 // 沉浸式
 include ':libraries:immersionbar'
 
+// LeakCanary
+include ':libraries:leakcanary'
+
 // 网络库
 include ':libraries:volley'
 include ':libraries:retrofit'
