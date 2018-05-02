@@ -13,15 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.squareup.leakcanary;
+package com.squareup.leakcanary.watcher;
 
-import android.os.Debug;
+import java.io.File;
 
-import com.squareup.leakcanary.watcher.DebuggerControl;
+/**
+ * Dumps the heap into a file.
+ */
+public interface HeapDumper {
+    HeapDumper NONE = new HeapDumper() {
+        @Override
+        public File dumpHeap() {
+            return RETRY_LATER;
+        }
+    };
 
-public final class AndroidDebuggerControl implements DebuggerControl {
-    @Override
-    public boolean isDebuggerAttached() {
-        return Debug.isDebuggerConnected();
-    }
+    File RETRY_LATER = null;
+
+    /**
+     * @return a {@link File} referencing the dumped heap, or {@link #RETRY_LATER} if the heap could
+     * not be dumped.
+     */
+    File dumpHeap();
 }

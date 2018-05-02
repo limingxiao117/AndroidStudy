@@ -36,7 +36,7 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.M;
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
-import static com.squareup.leakcanary.HeapDumper.RETRY_LATER;
+import static com.squareup.leakcanary.watcher.HeapDumper.RETRY_LATER;
 import static com.squareup.leakcanary.internal.LeakCanaryInternals.showNotification;
 
 public final class DefaultLeakDirectoryProvider implements LeakDirectoryProvider {

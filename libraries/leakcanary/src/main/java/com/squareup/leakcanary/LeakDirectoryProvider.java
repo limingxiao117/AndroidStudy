@@ -15,6 +15,8 @@
  */
 package com.squareup.leakcanary;
 
+import com.squareup.leakcanary.watcher.HeapDumper;
+
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.List;

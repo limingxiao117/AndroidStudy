@@ -22,9 +22,12 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.util.Log;
 
+import com.squareup.leakcanary.analyze.AnalysisResult;
 import com.squareup.leakcanary.internal.DisplayLeakActivity;
 import com.squareup.leakcanary.internal.HeapAnalyzerService;
 import com.squareup.leakcanary.internal.LeakCanaryInternals;
+import com.squareup.leakcanary.watcher.HeapDump;
+import com.squareup.leakcanary.watcher.RefWatcher;
 
 import static android.text.format.Formatter.formatShortFileSize;
 import static com.squareup.leakcanary.BuildConfig.GIT_SHA;

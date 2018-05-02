@@ -13,15 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.squareup.leakcanary;
+package com.squareup.leakcanary.watcher;
 
-import android.os.Debug;
+public final class Preconditions {
 
-import com.squareup.leakcanary.watcher.DebuggerControl;
+    /**
+     * Returns instance unless it's null.
+     *
+     * @throws NullPointerException if instance is null
+     */
+    public static <T> T checkNotNull(T instance, String name) {
+        if (instance == null) {
+            throw new NullPointerException(name + " must not be null");
+        }
+        return instance;
+    }
 
-public final class AndroidDebuggerControl implements DebuggerControl {
-    @Override
-    public boolean isDebuggerAttached() {
-        return Debug.isDebuggerConnected();
+    private Preconditions() {
+        throw new AssertionError();
     }
 }

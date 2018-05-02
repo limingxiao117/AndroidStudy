@@ -13,15 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.squareup.leakcanary;
+package com.squareup.leakcanary.watcher;
 
-import android.os.Debug;
+/**
+ * Gives the opportunity to skip checking if a reference is gone when the debugger is connected.
+ * An attached debugger might retain references and create false positives.
+ */
+public interface DebuggerControl {
+    DebuggerControl NONE = new DebuggerControl() {
+        @Override
+        public boolean isDebuggerAttached() {
+            return false;
+        }
+    };
 
-import com.squareup.leakcanary.watcher.DebuggerControl;
-
-public final class AndroidDebuggerControl implements DebuggerControl {
-    @Override
-    public boolean isDebuggerAttached() {
-        return Debug.isDebuggerConnected();
-    }
+    boolean isDebuggerAttached();
 }

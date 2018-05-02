@@ -23,18 +23,18 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.squareup.leakcanary.Exclusion;
-import com.squareup.leakcanary.LeakTrace;
-import com.squareup.leakcanary.LeakTraceElement;
 import com.squareup.leakcanary.R;
+import com.squareup.leakcanary.analyze.LeakTrace;
+import com.squareup.leakcanary.analyze.LeakTraceElement;
+import com.squareup.leakcanary.watcher.Exclusion;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.squareup.leakcanary.LeakTraceElement.Holder.ARRAY;
-import static com.squareup.leakcanary.LeakTraceElement.Holder.THREAD;
-import static com.squareup.leakcanary.LeakTraceElement.Type.STATIC_FIELD;
+import static com.squareup.leakcanary.analyze.LeakTraceElement.Holder.ARRAY;
+import static com.squareup.leakcanary.analyze.LeakTraceElement.Holder.THREAD;
+import static com.squareup.leakcanary.analyze.LeakTraceElement.Type.STATIC_FIELD;
 
 final class DisplayLeakAdapter extends BaseAdapter {
 

@@ -30,7 +30,7 @@ import android.content.pm.ServiceInfo;
 
 import com.squareup.leakcanary.CanaryLog;
 import com.squareup.leakcanary.R;
-import com.squareup.leakcanary.RefWatcher;
+import com.squareup.leakcanary.watcher.RefWatcher;
 
 import java.util.List;
 import java.util.concurrent.Executor;

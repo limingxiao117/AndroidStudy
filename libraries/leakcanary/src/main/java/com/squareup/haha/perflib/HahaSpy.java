@@ -13,15 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.squareup.leakcanary;
+package com.squareup.haha.perflib;
 
-import android.os.Debug;
+public final class HahaSpy {
 
-import com.squareup.leakcanary.watcher.DebuggerControl;
-
-public final class AndroidDebuggerControl implements DebuggerControl {
-    @Override
-    public boolean isDebuggerAttached() {
-        return Debug.isDebuggerConnected();
+  public static Instance allocatingThread(Instance instance) {
+    Snapshot snapshot = instance.mHeap.mSnapshot;
+    int threadSerialNumber;
+    if (instance instanceof RootObj) {
+      threadSerialNumber = ((RootObj) instance).mThread;
+    } else {
+      threadSerialNumber = instance.mStack.mThreadSerialNumber;
     }
+    ThreadObj thread = snapshot.getThread(threadSerialNumber);
+    return snapshot.findInstance(thread.mId);
+  }
+
+  private HahaSpy() {
+    throw new AssertionError();
+  }
 }

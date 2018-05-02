@@ -18,9 +18,10 @@ package com.squareup.leakcanary;
 import android.content.Context;
 
 import com.squareup.leakcanary.internal.HeapAnalyzerService;
+import com.squareup.leakcanary.watcher.HeapDump;
 
-import static com.squareup.leakcanary.Preconditions.checkNotNull;
 import static com.squareup.leakcanary.internal.LeakCanaryInternals.setEnabled;
+import static com.squareup.leakcanary.watcher.Preconditions.checkNotNull;
 
 public final class ServiceHeapDumpListener implements HeapDump.Listener {
 

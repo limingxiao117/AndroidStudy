@@ -19,7 +19,9 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 
-import static com.squareup.leakcanary.Preconditions.checkNotNull;
+import com.squareup.leakcanary.watcher.RefWatcher;
+
+import static com.squareup.leakcanary.watcher.Preconditions.checkNotNull;
 
 public final class ActivityRefWatcher {
 

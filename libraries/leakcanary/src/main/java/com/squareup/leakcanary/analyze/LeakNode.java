@@ -13,15 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.squareup.leakcanary;
+package com.squareup.leakcanary.analyze;
 
-import android.os.Debug;
+import com.squareup.haha.perflib.Instance;
+import com.squareup.leakcanary.watcher.Exclusion;
 
-import com.squareup.leakcanary.watcher.DebuggerControl;
+final class LeakNode {
+    /**
+     * May be null.
+     */
+    final Exclusion     exclusion;
+    final Instance      instance;
+    final LeakNode      parent;
+    final LeakReference leakReference;
 
-public final class AndroidDebuggerControl implements DebuggerControl {
-    @Override
-    public boolean isDebuggerAttached() {
-        return Debug.isDebuggerConnected();
+    LeakNode(Exclusion exclusion, Instance instance, LeakNode parent, LeakReference leakReference) {
+        this.exclusion = exclusion;
+        this.instance = instance;
+        this.parent = parent;
+        this.leakReference = leakReference;
     }
 }

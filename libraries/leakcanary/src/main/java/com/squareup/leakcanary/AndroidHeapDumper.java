@@ -25,6 +25,7 @@ import android.view.LayoutInflater;
 import android.widget.Toast;
 
 import com.squareup.leakcanary.internal.FutureResult;
+import com.squareup.leakcanary.watcher.HeapDumper;
 
 import java.io.File;
 

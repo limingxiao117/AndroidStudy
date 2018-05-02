@@ -4,10 +4,17 @@ import android.app.Application;
 import android.content.Context;
 
 import com.squareup.leakcanary.internal.LeakCanaryInternals;
+import com.squareup.leakcanary.watcher.DebuggerControl;
+import com.squareup.leakcanary.watcher.ExcludedRefs;
+import com.squareup.leakcanary.watcher.HeapDump;
+import com.squareup.leakcanary.watcher.HeapDumper;
+import com.squareup.leakcanary.watcher.RefWatcher;
+import com.squareup.leakcanary.watcher.RefWatcherBuilder;
+import com.squareup.leakcanary.watcher.WatchExecutor;
 
 import java.util.concurrent.TimeUnit;
 
-import static com.squareup.leakcanary.RefWatcher.DISABLED;
+import static com.squareup.leakcanary.watcher.RefWatcher.DISABLED;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**

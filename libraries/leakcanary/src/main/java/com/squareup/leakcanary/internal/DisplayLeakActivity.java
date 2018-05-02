@@ -41,12 +41,12 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.squareup.leakcanary.AnalysisResult;
 import com.squareup.leakcanary.CanaryLog;
 import com.squareup.leakcanary.DefaultLeakDirectoryProvider;
-import com.squareup.leakcanary.HeapDump;
 import com.squareup.leakcanary.LeakDirectoryProvider;
 import com.squareup.leakcanary.R;
+import com.squareup.leakcanary.analyze.AnalysisResult;
+import com.squareup.leakcanary.watcher.HeapDump;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -66,8 +66,8 @@ import static android.text.format.DateUtils.FORMAT_SHOW_TIME;
 import static android.text.format.Formatter.formatShortFileSize;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
-import static com.squareup.leakcanary.BuildConfig.GIT_SHA;
-import static com.squareup.leakcanary.BuildConfig.LIBRARY_VERSION;
+//import static com.squareup.leakcanary.BuildConfig.GIT_SHA;
+//import static com.squareup.leakcanary.BuildConfig.LIBRARY_VERSION;
 import static com.squareup.leakcanary.LeakCanary.leakInfo;
 import static com.squareup.leakcanary.internal.LeakCanaryInternals.newSingleThreadExecutor;
 
@@ -287,9 +287,9 @@ public final class DisplayLeakActivity extends Activity {
                 listView.setVisibility(GONE);
                 failureView.setVisibility(VISIBLE);
                 String failureMessage = getString(R.string.leak_canary_failure_report)
-                        + LIBRARY_VERSION
+//                        + LIBRARY_VERSION
                         + " "
-                        + GIT_SHA
+//                        + GIT_SHA
                         + "\n"
                         + Log.getStackTraceString(result.failure);
                 failureView.setText(failureMessage);

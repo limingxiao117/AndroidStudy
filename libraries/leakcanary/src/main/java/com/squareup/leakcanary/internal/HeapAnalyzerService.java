@@ -20,10 +20,10 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.squareup.leakcanary.AbstractAnalysisResultService;
-import com.squareup.leakcanary.AnalysisResult;
+import com.squareup.leakcanary.analyze.AnalysisResult;
 import com.squareup.leakcanary.CanaryLog;
-import com.squareup.leakcanary.HeapAnalyzer;
-import com.squareup.leakcanary.HeapDump;
+import com.squareup.leakcanary.analyze.HeapAnalyzer;
+import com.squareup.leakcanary.watcher.HeapDump;
 
 /**
  * This service runs in a separate process to avoid slowing down the app process or making it run

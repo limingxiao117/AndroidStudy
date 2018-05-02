@@ -20,9 +20,12 @@ import android.os.HandlerThread;
 import android.os.Looper;
 import android.os.MessageQueue;
 
+import com.squareup.leakcanary.watcher.Retryable;
+import com.squareup.leakcanary.watcher.WatchExecutor;
+
 import java.util.concurrent.TimeUnit;
 
-import static com.squareup.leakcanary.Retryable.Result.RETRY;
+import static com.squareup.leakcanary.watcher.Retryable.Result.RETRY;
 
 /**
  * {@link WatchExecutor} suitable for watching Android reference leaks. This executor waits for the
