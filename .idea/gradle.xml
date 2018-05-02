@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/leakcanary" />
             <option value="$PROJECT_DIR$/libraries" />
             <option value="$PROJECT_DIR$/libraries/base" />
             <option value="$PROJECT_DIR$/libraries/greendao-api" />
@@ -16,7 +17,6 @@
             <option value="$PROJECT_DIR$/libraries/greendao-generator" />
             <option value="$PROJECT_DIR$/libraries/immersionbar" />
             <option value="$PROJECT_DIR$/libraries/jobqueue" />
-            <option value="$PROJECT_DIR$/libraries/leakcanary" />
             <option value="$PROJECT_DIR$/libraries/retrofit" />
             <option value="$PROJECT_DIR$/libraries/volley" />
           </set>

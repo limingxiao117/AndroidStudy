@@ -1,5 +1,5 @@
 // 沉浸式
-include ':libraries:immersionbar'
+include ':libraries:immersionbar', ':leakcanary'
 
 // LeakCanary
 include ':libraries:leakcanary'
