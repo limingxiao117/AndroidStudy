@@ -15,7 +15,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        buildConfigField "String", "LIBRARY_VERSION", "v1.0"
+        buildConfigField "String", "LIBRARY_VERSION", "\"v1.0\""
         buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
     }
 
