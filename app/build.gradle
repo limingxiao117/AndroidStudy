@@ -78,13 +78,15 @@ dependencies {
     //
     implementation project(':libraries:greendao-core')
     implementation project(':libraries:greendao-generator')
+    // JobQueue
     implementation project(':libraries:jobqueue')
     // 网络库
     implementation project(':libraries:volley')
     implementation project(':libraries:retrofit')
     // 内存泄漏：LeakCanary
-    //compile 'com.squareup.leakcanary:leakcanary-android:1.5'
     implementation project(':libraries:leakcanary')
+    // 性能检测
+    implementation project(':libraries:blockcanary')
 }
 
 greendao {

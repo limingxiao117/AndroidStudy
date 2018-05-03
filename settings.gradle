@@ -4,6 +4,9 @@ include ':libraries:immersionbar'
 // LeakCanary
 include ':libraries:leakcanary'
 
+// BlockCanary
+include ':libraries:blockcanary'
+
 // 网络库
 include ':libraries:volley'
 include ':libraries:retrofit'
