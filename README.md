@@ -10,6 +10,7 @@
     6）Retrofit框架集成
     7）多Dex
     8）LeakCanary
+    9）BlockCanary
 
 ## 待完成功能
 
@@ -17,8 +18,6 @@
     2）图片加载 -- Fresco  一个用于管理图像和他们使用的内存的库
     3）网络解析 -- Gson    一个Java序列化/反序列化库，可以将JSON和java对象互相转换
     4）事件总线 -- EventBus    安卓优化的事件总线，简化了活动、片段、线程、服务等的通信
-    6）性能优化 -- LeakCanary  内存泄漏检测工具
-        BlockCanary
     7）Adapter复用 BaseRecyclerViewAdapterHelper Adapter复用工具类
 
 ## 详细介绍：
@@ -160,6 +159,11 @@ public class ExampleApplication extends Application {
     // Normal app init code...
   }
 }
+```
+
+#### 9）BlockCanary
+```
+BlockCanary.install(this, new AppBlockCanaryContext()).start();
 ```
 
 ## Contact Me

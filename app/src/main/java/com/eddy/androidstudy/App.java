@@ -10,6 +10,7 @@ import com.eddy.jobqueue.JobManager;
 import com.eddy.jobqueue.config.Configuration;
 import com.eddy.jobqueue.log.CustomLogger;
 
+import com.github.moduth.blockcanary.BlockCanary;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
@@ -21,6 +22,7 @@ import com.squareup.leakcanary.LeakCanary;
 
 public class App extends MultiDexApplication {
 
+    private static Context    mContext;
     private static App        mInstance;
     private        JobManager mJobManager;
 
@@ -38,12 +40,15 @@ public class App extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        mContext = this;
         // config Log
         Logger.init(BuildConfig.DEBUG, "eddy");
 
         // config LeakCanary
-        configureLearCanary();
+        configureLeakCanary();
+
+        // config BlockCanary
+        configureBlcokCanary();
 
         // config StrictMode
         configureStrictMode();
@@ -60,7 +65,29 @@ public class App extends MultiDexApplication {
         MultiDex.install(this);
     }
 
-    private void configureLearCanary() {
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+
+        unConfigureBlcokCanary();
+    }
+
+    private void configureBlcokCanary() {
+        if (BuildConfig.DEBUG && Constants.IS_NEED_BLOCK_CANARY) {
+            BlockCanary.install(this, new AppBlockCanaryContext()).start();
+        }
+    }
+
+    private void unConfigureBlcokCanary() {
+        if (BuildConfig.DEBUG && Constants.IS_NEED_BLOCK_CANARY) {
+            BlockCanary blockCanary = BlockCanary.get();
+            if (null != blockCanary) {
+                blockCanary.stop();
+            }
+        }
+    }
+
+    private void configureLeakCanary() {
         // 检查内存泄漏
         if (BuildConfig.DEBUG && Constants.IS_NEED_LEAK_CANARY) {
             if (LeakCanary.isInAnalyzerProcess(this)) {
@@ -134,5 +161,9 @@ public class App extends MultiDexApplication {
 
     public JobManager getJobManager() {
         return mJobManager;
+    }
+
+    public static Context getAppContext() {
+        return mContext;
     }
 }

@@ -16,10 +16,13 @@ public class Constants {
     /**
      * 是否打开LeakCanary
      */
-    public static final boolean IS_NEED_LEAK_CANARY = false;
-
+    public static final boolean IS_NEED_LEAK_CANARY = true;
     /**
-     * S是否打开StrictMode
+     * 是否打开BlockCanary
+     */
+    public static final boolean IS_NEED_BLOCK_CANARY = true;
+    /**
+     * 是否打开StrictMode
      */
     public static final boolean IS_NEED_STRICT_MODE = false;
 
