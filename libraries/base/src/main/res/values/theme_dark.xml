@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>-->
+
+        <!--checkbox等控件的背景颜色-->
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorAccent">@color/color_accent</item>
+
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@android:color/transparent</item>
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <!--ActionBar属性-->
+        <!--<item name="actionBarPopupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="actionBarWidgetTheme">@null</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="listChoiceBackgroundIndicator">@drawable/abc_list_selector_holo_dark</item>-->
+
+        <!--界面背景-->
+        <item name="android:windowBackground">@color/window_background</item>
+        <!--<item name="windowActionModeOverlay">true</item>
+        <item name="android:actionModeBackground">@color/actionModeBackground</item>-->
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--Actionbar title属性设置-->
+    <style name="actionbar_title_appearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_actionbar_title</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="actionbar_theme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- 设置返回键-->
+        <!--<item name="android:homeAsUpIndicator">@drawable/icon_back</item>-->
+    </style>
+
+    <style name="actionbar_popup_theme" parent="ThemeOverlay.AppCompat.Dark"></style>
+</resources>

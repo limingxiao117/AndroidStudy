@@ -1,3 +1,123 @@
 <resources>
-    <string name="app_name">Base</string>
+    <string name="library_name">library</string>
+    <string name="common_loading_message">Loading...</string>
+    <string name="common_empty_msg">Oops, failed to resolve data\nPlease hit the screen and try again</string>
+    <string name="common_error_msg">Oops, something wrong!\nPlease hit the screen and try again</string>
+    <string name="common_no_network_msg">No network connected!\nPlease hit the screen and try again after connecting</string>
+    <string name="cpb_default_sweep_speed">1</string>
+    <string name="cpb_default_rotation_speed">1</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="done">Done</string>
+    <string name="contine">Continue</string>
+    <string name="configure_now">Configure now</string>
+    <string name="quit">Quit </string>
+    <string name="delete">Delete</string>
+    <string name="retry">Retry</string>
+    <string name="later">Later</string>
+    <string name="save">Save</string>
+    <string name="submit">Submit</string>
+    <string name="tip_success">Success</string>
+    <string name="tip_failed">Failure</string>
+    <string name="wifi">WiFi</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="mon">Mon</string>
+    <string name="tue">Tue</string>
+    <string name="wed">Wed</string>
+    <string name="thu">Thu</string>
+    <string name="fri">Fri</string>
+    <string name="sat">Sat</string>
+    <string name="sun">Sun</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="txt_date_key_ampm_time">%1$s%2$s</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="nickname">Nickname</string>
+    <string name="setting">Setting</string>
+    <string name="edit">Edit</string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+    <string name="download">Download</string>
+    <string name="alias">Alias</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
+    <string name="empty">Empty</string>
+    <string name="second">Sec</string>
+    <string name="exit">Exit</string>
+    <string name="accept">Accept</string>
+    <string name="refuse">Refuse</string>
+    <string name="low">low</string>
+    <string name="normal">normal</string>
+    <string name="high">high</string>
+    <string name="back">Back</string>
+    <string name="min">Min</string>
+    <string name="stop">Stop</string>
+    <string name="close">Close</string>
+    <string name="play">Play</string>
+    <string name="txt_wait_please">Please Wait...</string>
+    <string name="txt_wait_loading">Loading...</string>
+    <string name="error_network_unavailable">Network unavailable</string>
+    <string name="txt_no_content">No content</string>
+    <string name="txt_hr">hr</string>
+    <string-array name="twelve_month">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+    <string-array name="day_of_month">
+        <item>1st</item>
+        <item>2nd</item>
+        <item>3rd</item>
+        <item>4th</item>
+        <item>5th</item>
+        <item>6th</item>
+        <item>7th</item>
+        <item>8th</item>
+        <item>9th</item>
+        <item>10th</item>
+        <item>11st</item>
+        <item>12nd</item>
+        <item>13rd</item>
+        <item>14th</item>
+        <item>15th</item>
+        <item>16th</item>
+        <item>17th</item>
+        <item>18th</item>
+        <item>19th</item>
+        <item>20th</item>
+        <item>21st</item>
+        <item>22nd</item>
+        <item>23rd</item>
+        <item>24th</item>
+        <item>25th</item>
+        <item>26th</item>
+        <item>27th</item>
+        <item>28th</item>
+        <item>29th</item>
+        <item>30th</item>
+        <item>31st</item>
+    </string-array>
 </resources>

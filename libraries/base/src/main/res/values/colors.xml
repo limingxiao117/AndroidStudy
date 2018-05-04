@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- =========================项目主色======================================================= -->
+    <!-- meshare -->
+    <color name="meshare">#FFdf3646</color>
+    <color name="meshare_deep">#D13D4B</color>
+    <color name="alpha_50_meshare">#80df3646</color>
+    <color name="alpha_50_meshare_deep">#80D13D4B</color>
+    <!-- zmodo -->
+    <color name="zmodo">#FF00a8e2</color>
+    <color name="zmodo_deep">#00759e</color>
+    <color name="alpha_50_zmodo">#8000a8e2</color>
+    <color name="alpha_50_zmodo_deep">#8000759e</color>
+    <!-- funlux -->
+    <color name="funlux">#FF06c1ae</color>
+    <color name="funlux_deep">#08887a</color>
+    <color name="alpha_50_funlux">#8006c1ae</color>
+    <color name="alpha_50_funlux_deep">#8008887a</color>
+
+    <!-- =========================主色=========================================================== -->
+    <color name="color_primary">#272C2E</color>
+    <color name="color_primary_dark">@color/color_primary</color>
+    <color name="color_accent">@color/zmodo</color>
+    <color name="color_accent_deep">@color/zmodo_deep</color>
+    <color name="color_accent_alpha_50">@color/alpha_50_zmodo</color>
+    <color name="color_accent_deep_alpha_50">@color/alpha_50_zmodo_deep</color>
+    <color name="statusbar_color">#272C2E</color>
+
+    <!-- =========================页面背景基本色================================================== -->
+    <color name="window_background">#EFEFF4</color>
+    <color name="actionModeBackground">@color/color_primary</color>
+
+    <!-- =========================控件颜色======================================================= -->
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="red">#FFdf3646</color>
+    <color name="blue">#00a8e2</color>
+    <color name="blue_sky">#52C1F6</color>
+    <color name="royal_blue">#6593EF</color>
+    <color name="medium_sea_green">#31C27C</color>
+    <color name="light_sea_green">#34CCCD</color>
+    <color name="yellow_green">#89D043</color>
+    <color name="brown">#FA6567</color>
+    <color name="brown_2">#D8505c</color>
+    <color name="golden_rod">#FCC954</color>
+    <color name="choclate">#FEA356</color>
+    <color name="dim_gray">#8C98A6</color>
+    <color name="smoke_white">#F5F6F7</color>
+    <color name="gray_light">#DCDDDE</color>
+
+    <!-- =========================字体颜色======================================================= -->
+    <color name="text_color_accent">@color/color_accent</color><!-- 字体颜色根据项目不同而不同 -->
+    <color name="text_color_black">#5F5F5F</color>
+    <color name="text_color_blue">#00AACC</color>
+    <color name="text_color_white">#F5F6F7</color>
+    <color name="text_color_gray">#9C9C9C</color>
+    <color name="text_color_gray_light">#DCDDDE</color>
+    <color name="text_color_blue_sky">#52C1F6</color>
+    <color name="text_color_royal_blue">#6593EF</color>
+    <color name="text_color_medium_sea_green">#31C27C</color>
+    <color name="text_color_light_sea_green">#34CCCD</color>
+    <color name="text_color_yellow_green">#89D043</color>
+    <color name="text_color_brown">#FA6567</color>
+    <color name="text_color_golden_rod">#FCC954</color>
+    <color name="text_color_choclate">#FEA356</color>
+    <color name="text_color_red">#D8505c</color>
+
+    <!--  -->
+    <color name="alpha_05_white">#0DFFFFFF</color>
+    <color name="alpha_10_white">#1AFFFFFF</color>
+    <color name="alpha_15_white">#26FFFFFF</color>
+    <color name="alpha_20_white">#33FFFFFF</color>
+    <color name="alpha_25_white">#40FFFFFF</color>
+    <color name="alpha_30_white">#4DFFFFFF</color>
+    <color name="alpha_35_white">#59FFFFFF</color>
+    <color name="alpha_40_white">#66FFFFFF</color>
+    <color name="alpha_45_white">#73FFFFFF</color>
+    <color name="alpha_50_white">#80FFFFFF</color>
+    <color name="alpha_55_white">#8CFFFFFF</color>
+    <color name="alpha_60_white">#99FFFFFF</color>
+    <color name="alpha_65_white">#A6FFFFFF</color>
+    <color name="alpha_70_white">#B3FFFFFF</color>
+    <color name="alpha_75_white">#BFFFFFFF</color>
+    <color name="alpha_80_white">#CCFFFFFF</color>
+    <color name="alpha_85_white">#D9FFFFFF</color>
+    <color name="alpha_90_white">#E6FFFFFF</color>
+    <color name="alpha_95_white">#F2FFFFFF</color>
+
+    <color name="alpha_05_black">#0D000000</color>
+    <color name="alpha_10_black">#1A000000</color>
+    <color name="alpha_15_black">#26000000</color>
+    <color name="alpha_20_black">#33000000</color>
+    <color name="alpha_25_black">#40000000</color>
+    <color name="alpha_30_black">#4D000000</color>
+    <color name="alpha_35_black">#59000000</color>
+    <color name="alpha_40_black">#66000000</color>
+    <color name="alpha_45_black">#73000000</color>
+    <color name="alpha_50_black">#80000000</color>
+    <color name="alpha_55_black">#8C000000</color>
+    <color name="alpha_60_black">#99000000</color>
+    <color name="alpha_65_black">#A6000000</color>
+    <color name="alpha_70_black">#B3000000</color>
+    <color name="alpha_75_black">#BF000000</color>
+    <color name="alpha_80_black">#CC000000</color>
+    <color name="alpha_85_black">#D9000000</color>
+    <color name="alpha_90_black">#E6000000</color>
+    <color name="alpha_95_black">#F2000000</color>
+
+    <color name="material_grey_50">#fffafafa</color>
+    <color name="material_grey_100">#fff5f5f5</color>
+    <color name="material_grey_200">#ffEAEAEA</color>
+    <color name="material_grey_300">#ffe0e0e0</color>
+    <color name="material_grey_400">#ffBBBBBB</color>
+    <color name="material_grey_500">#ff989898</color>
+    <color name="material_grey_600">#ff757575</color>
+    <color name="material_grey_700">#ff505050</color>
+    <color name="material_grey_800">#ff424242</color>
+    <color name="material_grey_850">#ff303030</color>
+    <color name="material_grey_900">#ff212121</color>
+
+
+</resources>

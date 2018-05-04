@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- =========================字体大小======================================================= -->
+    <dimen name="text_size_36">20sp</dimen>
+    <dimen name="text_size_34">18sp</dimen>
+    <dimen name="text_size_32">17sp</dimen>
+    <dimen name="text_size_30">16sp</dimen>
+    <dimen name="text_size_26">14sp</dimen>
+    <dimen name="text_size_24">13sp</dimen>
+    <dimen name="text_size_20">11sp</dimen>
+
+    <dimen name="toolbar_padding_top">0dp</dimen>
+    <!-- 标题栏字体大小 -->
+    <dimen name="text_size_actionbar_title">20sp</dimen>
+</resources>
