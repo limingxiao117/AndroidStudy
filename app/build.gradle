@@ -72,8 +72,6 @@ dependencies {
     // 多Dex
     implementation 'com.android.support:multidex:1.0.0'
     //
-//    implementation project(':libraries:immersionbar')
-    //
     implementation project(':libraries:base')
     //
     implementation project(':libraries:greendao-core')
@@ -87,6 +85,9 @@ dependencies {
     implementation project(':libraries:leakcanary')
     // 性能检测
     implementation project(':libraries:blockcanary')
+    // baserecyclerviewadapter
+    implementation project(':libraries:baserecyclerviewadapterhelper')
+
 }
 
 greendao {

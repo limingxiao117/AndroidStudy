@@ -22,5 +22,7 @@ include ':libraries:greendao-api'
 include ':libraries:greendao-core'
 include ':libraries:greendao-generator'
 
+// baserecyclerviewadapterhelper
+include ':libraries:baserecyclerviewadapterhelper'
 //
 include ':app'
