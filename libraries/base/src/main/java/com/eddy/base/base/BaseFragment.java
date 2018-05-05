@@ -26,7 +26,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.eddy.base.BuildConfig;
-import com.eddy.base.R;
 import com.eddy.base.event.EventMsg;
 import com.eddy.base.swipeback.SwipeBackLayout;
 import com.eddy.immersionbar.ImmersionBar;

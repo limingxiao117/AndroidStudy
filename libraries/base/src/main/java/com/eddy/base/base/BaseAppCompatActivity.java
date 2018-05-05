@@ -54,7 +54,7 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     /**
      * context
      */
-    protected           Context mContext          = null;
+    protected Context mContext = null;
 
     /**
      * overridePendingTransition mode
