@@ -85,8 +85,17 @@ dependencies {
     implementation project(':libraries:leakcanary')
     // 性能检测
     implementation project(':libraries:blockcanary')
+
     // baserecyclerviewadapter
     implementation project(':libraries:baserecyclerviewadapterhelper')
+    // begin: baserecyclerviewadapter test
+    implementation project(':material-spinner-1.0.5')
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.kyleduo.switchbutton:library:2.0.0'
+    implementation 'com.orhanobut:logger:2.1.1'
+    // end: baserecyclerviewadapter test
+
+    //
 
 }
 

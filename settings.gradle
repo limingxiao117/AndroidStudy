@@ -24,5 +24,7 @@ include ':libraries:greendao-generator'
 
 // baserecyclerviewadapterhelper
 include ':libraries:baserecyclerviewadapterhelper'
+include ':libraries:material-spinner'
+
 //
 include ':app'

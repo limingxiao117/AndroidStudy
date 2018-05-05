@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.eddy.androidstudy.daemon.DaemonService;
 import com.eddy.androidstudy.greendao.GreenTestActivity;
+import com.eddy.androidstudy.recyclerview.WelcomeActivity;
 import com.eddy.androidstudy.retrofit.RetrofitTestActivity;
 import com.eddy.androidstudy.volley.VolleyTestActivity;
 import com.eddy.base.Logger;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnGreenDao;
     private Button mBtnVolley;
     private Button mBtnRetrofit;
+    private Button mBtnBaseRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mBtnRetrofit = findViewById(R.id.btn_retrofit_test);
         mBtnRetrofit.setOnClickListener(this);
+
+        mBtnBaseRecyclerView = findViewById(R.id.btn_base_recycler_adapter_test);
+        mBtnBaseRecyclerView.setOnClickListener(this);
+
 
     }
 
@@ -68,6 +74,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_retrofit_test:
                 startActivity(new Intent(this, RetrofitTestActivity.class));
+                break;
+            case R.id.btn_base_recycler_adapter_test:
+                startActivity(new Intent(this, WelcomeActivity.class));
                 break;
         }
     }
