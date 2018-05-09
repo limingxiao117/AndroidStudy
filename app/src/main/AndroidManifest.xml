@@ -21,6 +21,27 @@
         <activity android:name=".volley.VolleyTestActivity" />
         <activity android:name=".retrofit.RetrofitTestActivity" />
 
+        <!-- begin: recyclerview test -->
+        <activity android:name=".recyclerview.PullToRefreshUseActivity" />
+        <activity android:name=".recyclerview.WelcomeActivity" />
+        <activity android:name=".recyclerview.AnimationUseActivity" />
+        <activity android:name=".recyclerview.HeaderAndFooterUseActivity" />
+        <activity android:name=".recyclerview.SectionUseActivity" />
+        <activity android:name=".recyclerview.ChooseMultipleItemUseTypeActivity" />
+        <activity android:name=".recyclerview.MultipleItemUseActivity" />
+        <activity android:name=".recyclerview.MultipleItemRvAdapterUseActivity" />
+        <activity android:name=".recyclerview.EmptyViewUseActivity" />
+        <activity android:name=".recyclerview.ItemDragAndSwipeUseActivity" />
+        <activity android:name=".recyclerview.ExpandableUseActivity" />
+        <activity android:name=".recyclerview.DataBindingUseActivity" />
+        <activity android:name=".recyclerview.ItemClickActivity"></activity>
+        <activity android:name=".recyclerview.base.BaseActivity"></activity>
+        <activity
+            android:name=".recyclerview.HomeActivity"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".recyclerview.UpFetchUseActivity" />
+        <!-- end: recyclerview test -->
+
         <!--Service-->
         <service android:name=".daemon.DaemonService" />
 

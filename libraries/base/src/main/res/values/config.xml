@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--布局配置文件-->
+    <!--滑动返回边界距离-->
+    <dimen name="swipe_back_edge_size">16dp</dimen>
+    <!-- ActionBar高度-->
+    <dimen name="action_bar_height">52dp</dimen>
+    <dimen name="fl_container_bottom_height">56dp</dimen>
+    <dimen name="tab_height">36dp</dimen>
+</resources>

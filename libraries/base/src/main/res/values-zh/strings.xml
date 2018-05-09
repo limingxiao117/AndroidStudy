@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_loading_message">正在加载中...</string>
+    <string name="common_empty_msg">抱歉,暂未获取到数据!\n请点击屏幕重试~</string>
+    <string name="common_error_msg">抱歉,系统出错了!\n请点击屏幕重试~</string>
+    <string name="common_no_network_msg">暂未连接上网络!\n请连接后点击屏幕重试~</string>
+    <string name="cpb_default_rotation_speed">1</string>
+    <string name="cpb_default_sweep_speed">1</string>
+
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="done">完成</string>
+    <string name="contine">继续</string>
+    <string name="quit">退出 </string>
+    <string name="delete">删除</string>
+    <string name="retry">重试</string>
+    <string name="later">以后再说</string>
+    <string name="save">保存</string>
+    <string name="submit">提交</string>
+    <string name="tip_success">成功</string>
+    <string name="tip_failed">失败</string>
+    <string name="wifi">WiFi</string>
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+    <string name="sunday">星期日</string>
+    <string name="mon">周一</string>
+    <string name="tue">周二</string>
+    <string name="wed">周三</string>
+    <string name="thu">周四</string>
+    <string name="fri">周五</string>
+    <string name="sat">周六</string>
+    <string name="sun">周日</string>
+    <string name="pm">下午</string>
+    <string name="am">上午</string>
+    <string name="txt_date_key_ampm_time">%2$s%1$s</string>
+    <string name="today">今天</string>
+    <string name="yesterday">昨天</string>
+    <string name="gender">性别</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="nickname">昵称</string>
+    <string name="setting">设置</string>
+    <string name="edit">编辑</string>
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="download">下载</string>
+    <string name="alias">备注名</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="empty">空</string>
+    <string name="second">秒</string>
+    <string name="exit">离开</string>
+    <string name="configure_now">现在配置</string>
+    <string name="library_name">库名</string>
+    <string name="accept">接受</string>
+    <string name="refuse">拒绝</string>
+    <string name="low">低</string>
+    <string name="normal">中</string>
+    <string name="high">高</string>
+    <string name="back">返回</string>
+    <string name="min">分钟</string>
+    <string name="stop">停止</string>
+    <string name="close">关闭</string>
+    <string name="play">播放</string>
+    <string name="error_network_unavailable">网络连接不可用</string>
+    <string name="txt_wait_please">请稍候...</string>
+    <string name="txt_wait_loading">加载中...</string>
+    <string name="txt_no_content">数据为空</string>
+    <string name="txt_hr">小时</string>
+    <string-array name="twelve_month">
+        <item>1月</item>
+        <item>2月</item>
+        <item>3月</item>
+        <item>4月</item>
+        <item>5月</item>
+        <item>6月</item>
+        <item>7月</item>
+        <item>8月</item>
+        <item>9月</item>
+        <item>10月</item>
+        <item>11月</item>
+        <item>12月</item>
+    </string-array>
+
+    <string-array name="day_of_month">
+        <item>1日</item>
+        <item>2日</item>
+        <item>3日</item>
+        <item>4日</item>
+        <item>5日</item>
+        <item>6日</item>
+        <item>7日</item>
+        <item>8日</item>
+        <item>9日</item>
+        <item>10日</item>
+        <item>11日</item>
+        <item>12日</item>
+        <item>13日</item>
+        <item>14日</item>
+        <item>15日</item>
+        <item>16日</item>
+        <item>17日</item>
+        <item>18日</item>
+        <item>19日</item>
+        <item>20日</item>
+        <item>21日</item>
+        <item>22日</item>
+        <item>23日</item>
+        <item>24日</item>
+        <item>25日</item>
+        <item>26日</item>
+        <item>27日</item>
+        <item>28日</item>
+        <item>29日</item>
+        <item>30日</item>
+        <item>31日</item>
+    </string-array>
+</resources>

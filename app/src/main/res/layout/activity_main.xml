@@ -29,5 +29,12 @@
             android:layout_height="wrap_content"
             android:text="进入Retrofit测试界面"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_base_recycler_adapter_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进入RecyclerView测试界面"
+            android:textAllCaps="false" />
     </LinearLayout>
 </ScrollView>
