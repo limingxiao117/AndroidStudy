@@ -11,6 +11,7 @@
     7）多Dex
     8）LeakCanary
     9）BlockCanary
+	10）App文件命名规范
 
 ## 待完成功能
 
@@ -165,6 +166,55 @@ public class ExampleApplication extends Application {
 ```
 BlockCanary.install(this, new AppBlockCanaryContext()).start();
 ```
+
+#### 10）Android 资源文件命名与使用
+Activity 的layout 			以module_activity 开头
+Fragment 的layout 			以module_fragment 开头
+Dialog 的layout 			以module_dialog 开头
+include 的layout 			以module_include 开头
+ListView 的行layout 		以module_list_item 开头
+RecyclerView 的item layout 	以module_recycle_item 开头
+GridView 的行layout 		以module_grid_item 开头
+
+图片Drawable资源：
+模块名_业务功能描述_控件描述_控件状态限定词
+如：module_login_btn_pressed,module_tabs_icon_home_normal
+
+动画Anim：
+模块名_逻辑名称_[方向|序号]
+如module_fade_in, module_fade_out
+
+颜色Color：写入module_colors.xml 文件中
+模块名_逻辑名称_颜色
+如：<color name="module_btn_bg_color">#33b5e5e5</color>
+
+Dimen：写入module_dimens.xml 文件中，
+模块名_描述信息
+如：<dimen name="module_horizontal_line_height">1dp</dimen>
+
+String：写入module_strings.xml 文件中，
+模块名_逻辑名称
+如：moudule_login_tips,module_homepage_notice_desc
+
+id：
+LinearLayout 		ll
+RelativeLayout 		rl
+ConstraintLayout 	cl
+ListView 			lv
+ScollView 			sv
+TextView 			tv
+Button 				btn
+ImageView 			iv
+CheckBox 			cb
+RadioButton 		rb
+EditText 			et
+其它控件的缩写推荐使用小写字母并用下划线进行分割，例如：
+ProgressBar 对应的缩写为progress_bar
+DatePicker 对应的缩写为date_picker
+
+
+
+
 
 ## Contact Me
 
