@@ -12,6 +12,8 @@
     8）LeakCanary
     9）BlockCanary
 	10）App文件命名规范
+	11）EventBus
+	12）BaseRecyclerViewAdapterHelper
 
 ## 待完成功能
 
