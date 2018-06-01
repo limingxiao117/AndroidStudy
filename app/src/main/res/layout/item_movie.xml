@@ -25,14 +25,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
+<!--android:onClick="@{(view) -> presenter.buyTicket(view, movie)}"-->
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:onClick="@{(view) -> presenter.buyTicket(view, movie)}"
+
                 app:backgroundTint="@color/color_light_blue"
                 android:src="@mipmap/buy_icon"
                 android:layout_alignParentBottom="true"
@@ -54,32 +54,32 @@
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@mipmap/databinding_img"/>
-
+<!--android:text="@{movie.name}"-->
                 <TextView
                     android:id="@+id/movie_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/iv"
-                    android:text="@{movie.name}"
+
                     android:layout_marginLeft="10dp"
                     tools:text="Chad"
                     android:textStyle="bold"
                     android:textColor="@color/txt_color"
                     android:layout_marginTop="10dp"
                     android:textSize="16sp"/>
-
+<!--android:text='@{movie.content}'-->
                 <TextView
                     android:id="@+id/movie_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{movie.content}'
+
                     tools:text="He was one of Australia's most distinguished artistes"
                     android:textSize="12sp"
                     android:textColor="#888888"
                     android:layout_below="@+id/movie_name"
                     android:layout_alignLeft="@+id/movie_name"
                     android:layout_alignStart="@+id/movie_name"/>
-
+<!--android:text='@{movie.length+ " minute"}'-->
                 <TextView
                     android:id="@+id/movie_length"
                     android:layout_width="wrap_content"
@@ -87,16 +87,16 @@
                     tools:text="PM 11:28"
                     android:textColor="#CCCCCC"
                     android:textSize="12sp"
-                    android:text='@{movie.length+ " minute"}'
+
                     android:layout_below="@+id/movie_content"
                     android:layout_alignLeft="@+id/movie_content"
                     android:layout_alignStart="@+id/movie_content"/>
-
+<!--android:text='@{"$ " + movie.price}'-->
                 <TextView
                     android:id="@+id/movie_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text='@{"$ " + movie.price}'
+
                     tools:text="$ 12"
                     android:textStyle="bold"
                     android:textSize="28sp"

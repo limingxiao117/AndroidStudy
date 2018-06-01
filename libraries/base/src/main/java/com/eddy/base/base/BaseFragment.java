@@ -26,6 +26,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.eddy.base.BuildConfig;
+import com.eddy.base.R;
 import com.eddy.base.event.EventMsg;
 import com.eddy.base.swipeback.SwipeBackLayout;
 import com.eddy.immersionbar.ImmersionBar;
@@ -492,6 +493,7 @@ public abstract class BaseFragment extends Fragment implements IComStatus, BaseS
         return null;
     }
 
+    @SuppressWarnings("unchecked")
     protected <T extends Parcelable> T parcelableFromArguments(String key) {
         Bundle args = getArguments();
         if (args != null && args.containsKey(key))
